@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="belgium-banner"></div>
+    <button class="settings-btn" id="settingsBtn" title="Paramètres">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" stroke="#ffd600" stroke-width="2" fill="#222"/>
+            <path d="M12 8v4l2 2" stroke="#ffd600" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="1.5" fill="#ffd600"/>
+        </svg>
+    </button>
+    <div class="settings-modal" id="settingsModal">
+        <div class="settings-content">
+            <span class="close-settings" id="closeSettings">&times;</span>
+            <h2>Modifier le site web</h2>
+            <form>
+                <label for="siteTitle">Titre du site :</label>
+                <input type="text" id="siteTitle" name="siteTitle" placeholder="Bienvenue en Belgique">
+                <label for="siteColor">Couleur principale :</label>
+                <input type="color" id="siteColor" name="siteColor" value="#ffd600">
+                <hr>
+                <label for="themeSelect">Thème :</label>
+                <select id="themeSelect">
+                    <option value="clair">Clair</option>
+                    <option value="sombre">Sombre</option>
+                </select>
+                <br>
+                <label for="galleryToggle">Afficher la galerie d'images :</label>
+                <input type="checkbox" id="galleryToggle" checked>
+                <br>
+                <label for="anecdoteToggle">Afficher les anecdotes :</label>
+                <input type="checkbox" id="anecdoteToggle" checked>
+                <br>
+                <label for="fontSize">Taille du texte :</label>
+                <input type="range" id="fontSize" min="12" max="24" value="16">
+                <br>
+                <label for="langSelect">Langue :</label>
+                <select id="langSelect">
+                    <option value="fr">Français</option>
+                    <option value="nl">Néerlandais</option>
+                    <option value="en">Anglais</option>
+                </select>
+                <br>
+                <button type="button" id="resetSettings">Réinitialiser</button>
+                <button type="button" id="applySettings">Appliquer</button>
+            </form>
+        </div>
+    </div>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">Belgique</div>
+            <ul>
+                <li><a href="#hero">Accueil</a></li>
+                <li><a href="#carte">Carte</a></li>
+                <li><a href="#histoire">Histoire</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue en Belgique</h1>
+            <p>Découvrez la Belgique, son histoire, sa culture et ses régions.</p>
+            <div class="anecdotes-banderole">
+                <h3>Anecdotes insolites</h3>
+                <ul>
+                    <li>La Belgique détient le record du plus long gouvernement sans majorité (541 jours en 2010-2011).</li>
+                    <li>Le mot "spa" vient de la ville belge Spa, célèbre pour ses sources thermales.</li>
+                    <li>La Belgique possède plus de 1 000 sortes de bières différentes.</li>
+                    <li>Le saxophone a été inventé par le Belge Adolphe Sax.</li>
+                    <li>La Belgique a trois langues officielles : le français, le néerlandais et l’allemand.</li>
+                        <li>Le saxophone a été inventé par un Belge, Adolphe Sax.</li>
+                        <li>La Belgique a plus de châteaux par km² que la France.</li>
+                        <li>La première carte perforée pour ordinateur fut inventée à Bruxelles.</li>
+                        <li>La Belgique est le pays d'origine de Tintin, Spirou et les Schtroumpfs.</li>
+                        <li>Le plus petit gratte-ciel du monde se trouve à Anvers.</li>
+                </ul>
+            </div>
+            <a href="#carte" class="cta-btn">Voir la carte</a>
+        </div>
+    </section>
+
+    <section id="carte" class="carte-section">
+        <h2>Carte de la Belgique</h2>
+        <div class="carte-container">
+            <img src="belgium-administrative-map.svg" alt="Carte administrative de la Belgique" style="max-width: 100%; height: auto; box-shadow: 0 4px 24px rgba(63,81,181,0.15); border-radius: 20px;">
+        </div>
+    </section>
+
+    <section id="histoire" class="card">
+        <h2>Histoire de la Belgique</h2>
+        <div class="history-content">
+            <p>
+                La Belgique, située au carrefour de l’Europe, possède une histoire riche et complexe. Elle fut successivement occupée par les Celtes, les Romains, les Francs, les Espagnols, les Autrichiens, les Français et les Néerlandais. En 1830, la Belgique obtient son indépendance et devient une monarchie constitutionnelle.
+            </p>
+            <p>
+                Le pays a connu deux guerres mondiales, une industrialisation rapide et une évolution vers un État fédéral. Aujourd’hui, la Belgique est reconnue pour sa diversité culturelle, ses trois langues officielles et son rôle central dans l’Union européenne.
+            </p>
+            <p>
+                Parmi les personnages importants de l’histoire belge :
+            </p>
+            <div class="history-gallery">
+                    <div class="history-figure">
+                        <img src="img1.jpg" alt="Personnage historique 1" />
+                        <span>Léopold Ier<br><small>Premier roi des Belges (1831-1865)</small></span>
+                    </div>
+                    <div class="history-figure">
+                        <img src="img2.jpg" alt="Personnage historique 2" />
+                        <span>Adolphe Sax<br><small>Inventeur du saxophone</small></span>
+                    </div>
+                    <div class="history-figure">
+                        <img src="img3.jpg" alt="Personnage historique 3" />
+                        <span>Paul-Henri Spaak<br><small>Homme d'État, père de l'Europe</small></span>
+                    </div>
+            </div>
+        </div>
+    </section>
+
+        <section id="a-propos" class="card">
+            <h2>À propos</h2>
+            <p>Ce site web est dédié à la découverte de la Belgique. Que vous soyez un voyageur, un étudiant ou simplement curieux, explorez nos ressources pour en apprendre plus sur ce pays fascinant.</p>
+        </section>
+
+        <section id="contact" class="card">
+            <h2>Contact</h2>
+            <p>Pour plus d'informations, contactez-nous :</p>
+                <p>Pour nous contacter, écrivez à : <a href="mailto:vandeberg.greg@gmail.com">vandeberg.greg@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Belgique Explorer. Tous droits réservés.</p>
+        <div class="social-links">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
